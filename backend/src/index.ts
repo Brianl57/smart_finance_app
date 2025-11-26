@@ -2,7 +2,7 @@ import express from 'express';
 import './config/config'
 
 import { plaidClient } from './config/plaidClient';
-console.log(`Plaid client ${plaidClient}`);
+console.log('Plaid client: ', plaidClient);
 
 const app = express();
 

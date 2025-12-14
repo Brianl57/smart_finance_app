@@ -1,4 +1,5 @@
 import { Calendar, Home, Inbox, Search, Settings, CreditCard, DollarSign, PieChart } from "lucide-react"
+import { LogoutButton } from "./logout-button"
 
 import {
     Sidebar,
@@ -9,6 +10,7 @@ import {
     SidebarMenu,
     SidebarMenuButton,
     SidebarMenuItem,
+    SidebarFooter,
 } from "@/components/ui/sidebar"
 
 // Menu items.
@@ -62,6 +64,9 @@ export function AppSidebar() {
                     </SidebarGroupContent>
                 </SidebarGroup>
             </SidebarContent>
+            <SidebarFooter>
+                <LogoutButton />
+            </SidebarFooter>
         </Sidebar>
     )
 }

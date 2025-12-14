@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { mockTotalNetworth, mockTotalNetworthTimeSeries, mockSpending, formatCurrency } from "@/lib/data"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from "recharts"
+import { NetWorthChart } from "@/components/net-worth-chart"
 
 export default function DashboardPage() {
     return (
@@ -26,41 +27,7 @@ export default function DashboardPage() {
 
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
                 {/* Net Worth Chart */}
-                <Card className="col-span-4">
-                    <CardHeader>
-                        <CardTitle>Net Worth Performance</CardTitle>
-                    </CardHeader>
-                    <CardContent className="pl-2">
-                        <div className="h-[300px]">
-                            <ResponsiveContainer width="100%" height="100%">
-                                <LineChart data={mockTotalNetworthTimeSeries}>
-                                    <XAxis
-                                        dataKey="day"
-                                        stroke="#888888"
-                                        fontSize={12}
-                                        tickLine={false}
-                                        axisLine={false}
-                                    />
-                                    <YAxis
-                                        stroke="#888888"
-                                        fontSize={12}
-                                        tickLine={false}
-                                        axisLine={false}
-                                        tickFormatter={(value) => `$${value}`}
-                                    />
-                                    <Tooltip />
-                                    <Line
-                                        type="monotone"
-                                        dataKey="networth"
-                                        stroke="#4ECDC4"
-                                        strokeWidth={2}
-                                        dot={false}
-                                    />
-                                </LineChart>
-                            </ResponsiveContainer>
-                        </div>
-                    </CardContent>
-                </Card>
+                <NetWorthChart />
 
                 {/* Spending Breakdown */}
                 <Card className="col-span-3">

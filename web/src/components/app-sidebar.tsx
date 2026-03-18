@@ -25,21 +25,24 @@ const items = [
         url: "/dashboard/accounts",
         icon: CreditCard,
     },
-    {
-        title: "Cashflow",
-        url: "/dashboard/cashflow",
-        icon: DollarSign,
-    },
+    // {
+    //     title: "Cashflow",
+    //     url: "/dashboard/cashflow",
+    //     icon: DollarSign,
+    // },
     {
         title: "Transactions",
         url: "/dashboard/transactions",
-        icon: PieChart,
+        icon: PieChart, // Or CreditCard if preferred, but CreditCard is used for Accounts. Using PieChart or List. User requested "Transactions" specifically. 
+        // Let's use List or similar if available, otherwise PieChart as per my plan or maybe 'FileText'.
+        // The plan said PieChart or CreditCard or List. 
+        // Let's stick to what I wrote: PieChart is already imported? Yes.
     },
-    {
-        title: "Settings",
-        url: "/dashboard/settings",
-        icon: Settings,
-    },
+    // {
+    //     title: "Settings",
+    //     url: "/dashboard/settings",
+    //     icon: Settings,
+    // },
 ]
 
 export function AppSidebar() {
